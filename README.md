@@ -10,9 +10,26 @@ prototypes with explicit assumptions, tests and documented limits.
 
 | Project | Focus | What works today |
 | --- | --- | --- |
-| [Microgrid Dispatch Lab](https://github.com/aimvyECE/microgrid-dispatch-lab) | Energy systems and optimisation | Linear optimisation of synthetic grid / PV / battery scenarios; CSV and JSON results |
-| [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Strict CSV validation, site-level analysis, reproducible HTML / JSON reports |
-| [Avatar Preflight Lab](https://github.com/aimvyECE/avatar-preflight-lab) | Responsible voice and lip-sync workflows | Offline validation of pipeline declarations; model inference is future work |
+| [Microgrid Dispatch Lab](https://github.com/aimvyECE/microgrid-dispatch-lab) | Energy systems and optimisation | Linear optimisation and battery sensitivity sweeps; matched baselines and reproducible CSV/JSON experiments |
+| [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Reporting calendars, coverage and missing-month checks, factor provenance, HTML/JSON reports |
+| [Avatar Preflight Lab](https://github.com/aimvyECE/avatar-preflight-lab) | Responsible voice and lip-sync workflows | Declaration validation, deterministic fingerprints and change review; no model inference |
+
+## Reproduce, inspect, challenge
+
+| Project | Automated checks | Start here |
+| --- | --- | --- |
+| Energy optimisation | [![tests](https://github.com/aimvyECE/microgrid-dispatch-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/aimvyECE/microgrid-dispatch-lab/actions) | [Experiment guide](https://github.com/aimvyECE/microgrid-dispatch-lab/blob/main/docs/EXPERIMENTS.md) |
+| Energy reporting | [![tests](https://github.com/aimvyECE/energy-evidence/actions/workflows/tests.yml/badge.svg)](https://github.com/aimvyECE/energy-evidence/actions) | [Validation method](https://github.com/aimvyECE/energy-evidence/blob/main/VALIDATION.md) |
+| Avatar preflight | [Tests and workflow status](https://github.com/aimvyECE/avatar-preflight-lab/actions) | [Audit walkthrough](https://github.com/aimvyECE/avatar-preflight-lab/blob/main/docs/AUDIT.md) |
+
+The repositories include local quick starts, synthetic fixtures, regression tests
+and contribution guidance. A passing test suite checks implemented behavior,
+not field validity or production readiness.
+
+**Technical focus:** Python, linear programming (SciPy/HiGHS), structured data
+validation, deterministic reporting, CLI interfaces and continuous integration.
+These are technologies exercised in this portfolio, not a claim of expert-level
+experience with every related system.
 
 ## Questions I want to investigate
 
