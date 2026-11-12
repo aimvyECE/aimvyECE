@@ -12,6 +12,7 @@ prototypes with explicit assumptions, tests and documented limits.
 | --- | --- | --- |
 | [Microgrid Dispatch Lab](https://github.com/aimvyECE/microgrid-dispatch-lab) | Energy systems and optimisation | Linear optimisation and battery sensitivity sweeps; matched baselines and reproducible CSV/JSON experiments |
 | [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Reporting calendars, coverage and missing-month checks, factor provenance, HTML/JSON reports |
+| [Creative Vault Map](https://github.com/aimvyECE/creative-vault-map) | Creative archives and local-first tooling | Read-only Markdown/Obsidian link maps, isolated notes, exact duplicates and unresolved references; offline, synthetic examples |
 | [Avatar Preflight Lab](https://github.com/aimvyECE/avatar-preflight-lab) | Responsible voice and lip-sync workflows | Declaration validation, deterministic fingerprints and change review; no model inference |
 
 ## Reproduce, inspect, challenge
@@ -20,6 +21,7 @@ prototypes with explicit assumptions, tests and documented limits.
 | --- | --- | --- |
 | Energy optimisation | [![tests](https://github.com/aimvyECE/microgrid-dispatch-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/aimvyECE/microgrid-dispatch-lab/actions) | [Experiment guide](https://github.com/aimvyECE/microgrid-dispatch-lab/blob/main/docs/EXPERIMENTS.md) |
 | Energy reporting | [![tests](https://github.com/aimvyECE/energy-evidence/actions/workflows/tests.yml/badge.svg)](https://github.com/aimvyECE/energy-evidence/actions) | [Validation method](https://github.com/aimvyECE/energy-evidence/blob/main/VALIDATION.md) |
+| Creative archives | [Tests and workflow status](https://github.com/aimvyECE/creative-vault-map/actions) | [Quick start and limitations](https://github.com/aimvyECE/creative-vault-map#try-the-synthetic-example) |
 | Avatar preflight | [Tests and workflow status](https://github.com/aimvyECE/avatar-preflight-lab/actions) | [Audit walkthrough](https://github.com/aimvyECE/avatar-preflight-lab/blob/main/docs/AUDIT.md) |
 
 The repositories include local quick starts, synthetic fixtures, regression tests
