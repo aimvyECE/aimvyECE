@@ -14,6 +14,10 @@ prototypes with explicit assumptions, tests and documented limits.
 | [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Reporting calendars, coverage and missing-month checks, factor provenance, HTML/JSON reports |
 | [Creative Vault Map](https://github.com/aimvyECE/creative-vault-map) | Creative archives and local-first tooling | Read-only Markdown/Obsidian link maps, isolated notes, exact duplicates and unresolved references; offline, synthetic examples |
 | [Avatar Preflight Lab](https://github.com/aimvyECE/avatar-preflight-lab) | Responsible voice and lip-sync workflows | Declaration validation, deterministic fingerprints and change review; no model inference |
+| [Context Budget Lab](https://github.com/aimvyECE/context-budget-lab) | Provider-neutral evidence retrieval | Local cited context bundles, excerpt budgets, duplicate suppression and stale-source checks; no language model inference |
+| [Agent Change Ledger](https://github.com/aimvyECE/agent-change-ledger) | Human-supervised agent edits | Hash-checked proposals, diff preview and journaled undo; optional Ollama adapter not tested with real inference |
+| [Identity Studio](https://github.com/aimvyECE/identity-studio) | Consent-aware fashion visualization | Local references, edit briefs, result comparison and human review; optional Qwen adapter tested with doubles, not real images |
+| [Routine OS Local](https://github.com/aimvyECE/routine-os-local) | Local-first organisation | Editable daily lists, microsteps, notes and JSON export; public v0.2 has no automatic recurring routines or AI engine |
 
 ## Reproduce, inspect, challenge
 
@@ -23,13 +27,29 @@ prototypes with explicit assumptions, tests and documented limits.
 | Energy reporting | [![tests](https://github.com/aimvyECE/energy-evidence/actions/workflows/tests.yml/badge.svg)](https://github.com/aimvyECE/energy-evidence/actions) | [Validation method](https://github.com/aimvyECE/energy-evidence/blob/main/VALIDATION.md) |
 | Creative archives | [Tests and workflow status](https://github.com/aimvyECE/creative-vault-map/actions) | [Quick start and limitations](https://github.com/aimvyECE/creative-vault-map#try-the-synthetic-example) |
 | Avatar preflight | [Tests and workflow status](https://github.com/aimvyECE/avatar-preflight-lab/actions) | [Audit walkthrough](https://github.com/aimvyECE/avatar-preflight-lab/blob/main/docs/AUDIT.md) |
+| Context tooling | [Tests and workflow status](https://github.com/aimvyECE/context-budget-lab/actions) | [Synthetic benchmark and limits](https://github.com/aimvyECE/context-budget-lab#a-small-honest-benchmark) |
+| Agent edit boundary | [Tests and workflow status](https://github.com/aimvyECE/agent-change-ledger/actions) | [Local quick start](https://github.com/aimvyECE/agent-change-ledger#try-it-without-a-model) |
+| Identity workbench | [Tests and workflow status](https://github.com/aimvyECE/identity-studio/actions) | [Verification limits](https://github.com/aimvyECE/identity-studio/blob/main/docs/VERIFICATION.md) |
+| Organisation toolbox | [Tests and workflow status](https://github.com/aimvyECE/routine-os-local/actions) | [Public-version scope](https://github.com/aimvyECE/routine-os-local#not-implemented--not-claimed) |
 
 The repositories include local quick starts, synthetic fixtures, regression tests
 and contribution guidance. A passing test suite checks implemented behavior,
 not field validity or production readiness.
 
+### Work in review and upstream exploration
+
+[Energy Evidence PR #1](https://github.com/aimvyECE/energy-evidence/pull/1)
+adds year comparisons over matching calendar months, with missing periods kept
+explicit. It is currently a draft proposal, not a feature merged into `main`;
+matching months does not establish weather-normalized or verified savings.
+
+My public account also contains unmodified forks of upstream Crafting Apps.
+Those applications are the work of their original authors, not portfolio projects
+created here. A fork is a reference copy, not evidence of a contribution or of a
+collaborating community. Upstream code, asset and branding licences still apply.
+
 **Technical focus:** Python, linear programming (SciPy/HiGHS), structured data
-validation, deterministic reporting, CLI interfaces and continuous integration.
+validation, deterministic reporting, CLI interfaces and continuous integration, and browser-side JavaScript.
 These are technologies exercised in this portfolio, not a claim of expert-level
 experience with every related system.
 
