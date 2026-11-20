@@ -36,12 +36,18 @@ The repositories include local quick starts, synthetic fixtures, regression test
 and contribution guidance. A passing test suite checks implemented behavior,
 not field validity or production readiness.
 
-### Work in review and upstream exploration
+### Two demos to try
 
-[Energy Evidence PR #1](https://github.com/aimvyECE/energy-evidence/pull/1)
-adds year comparisons over matching calendar months, with missing periods kept
-explicit. It is currently a draft proposal, not a feature merged into `main`;
-matching months does not establish weather-normalized or verified savings.
+- **Battery dispatch:** [Run the sensitivity experiment](https://github.com/aimvyECE/microgrid-dispatch-lab/blob/main/docs/EXPERIMENTS.md) to generate 32 synthetic cases. Compare the electricity bill and modeled grid emissions against the matched no-storage baseline. A lower objective does not necessarily mean a lower bill.
+- **Energy reporting:** [Run the sample CSV](https://github.com/aimvyECE/energy-evidence#quick-start-python-310) and open the HTML report, or [inspect the example output](https://github.com/aimvyECE/energy-evidence/blob/main/examples/report/report.html). The workshop totals 3,700 kWh, and the March change is flagged for investigation, not diagnosed as a fault.
+
+### Draft changes, not part of `main`
+
+| Proposal | What it adds |
+| --- | --- |
+| [Microgrid Dispatch Lab #1](https://github.com/aimvyECE/microgrid-dispatch-lab/pull/1) | Sparse dispatch constraints reduce matrix storage for long horizons without changing the model. |
+| [Energy Evidence #1](https://github.com/aimvyECE/energy-evidence/pull/1) | Compares matched calendar months across years; not a weather-normalized savings estimate. |
+| [Energy Evidence #2](https://github.com/aimvyECE/energy-evidence/pull/2) | Flags entire missing sites when an expected site list is supplied, without treating missing readings as zero. |
 
 My public account also contains unmodified forks of upstream Crafting Apps.
 Those applications are the work of their original authors, not portfolio projects
