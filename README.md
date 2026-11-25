@@ -10,8 +10,8 @@ prototypes with explicit assumptions, tests and documented limits.
 
 | Project | Focus | What works today |
 | --- | --- | --- |
-| [Microgrid Dispatch Lab](https://github.com/aimvyECE/microgrid-dispatch-lab) | Energy systems and optimisation | Linear optimisation and battery sensitivity sweeps; matched baselines and reproducible CSV/JSON experiments |
-| [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Reporting calendars, coverage and missing-month checks, factor provenance, HTML/JSON reports |
+| [Microgrid Dispatch Lab](https://github.com/aimvyECE/microgrid-dispatch-lab) | Energy systems and optimisation | Linear optimisation, battery sensitivity sweeps and forecast-signal regret; matched synthetic baselines |
+| [Energy Evidence](https://github.com/aimvyECE/energy-evidence) | Traceable energy reporting | Reporting calendars, missing-month checks, factor provenance and deterministic emissions ranges; HTML/JSON reports |
 | [Creative Vault Map](https://github.com/aimvyECE/creative-vault-map) | Creative archives and local-first tooling | Read-only Markdown/Obsidian link maps, isolated notes, exact duplicates and unresolved references; offline, synthetic examples |
 | [Avatar Preflight Lab](https://github.com/aimvyECE/avatar-preflight-lab) | Responsible voice and lip-sync workflows | Declaration validation, deterministic fingerprints and change review; no model inference |
 | [Context Budget Lab](https://github.com/aimvyECE/context-budget-lab) | Provider-neutral evidence retrieval | Local cited context bundles, excerpt budgets, duplicate suppression and stale-source checks; no language model inference |
@@ -38,8 +38,8 @@ not field validity or production readiness.
 
 ### Two demos to try
 
-- **Battery dispatch:** [Run the sensitivity experiment](https://github.com/aimvyECE/microgrid-dispatch-lab/blob/main/docs/EXPERIMENTS.md) to generate 32 synthetic cases. Compare the electricity bill and modeled grid emissions against the matched no-storage baseline. A lower objective does not necessarily mean a lower bill.
-- **Energy reporting:** [Run the sample CSV](https://github.com/aimvyECE/energy-evidence#quick-start-python-310) and open the HTML report, or [inspect the example output](https://github.com/aimvyECE/energy-evidence/blob/main/examples/report/report.html). The workshop totals 3,700 kWh, and the March change is flagged for investigation, not diagnosed as a fault.
+- **Battery dispatch:** [Run the sensitivity experiment](https://github.com/aimvyECE/microgrid-dispatch-lab/blob/main/docs/EXPERIMENTS.md) to generate 24 synthetic cases. Compare the electricity bill and modeled grid emissions against the matched no-storage baseline. A lower objective does not necessarily mean a lower bill. [Stress-test tariff/carbon forecasts](https://github.com/aimvyECE/microgrid-dispatch-lab#forecast-signal-regret-stress-test-the-optimizers-assumptions) against hindsight and no-storage baselines; demand and PV remain perfectly known.
+- **Energy reporting:** [Run the sample CSV](https://github.com/aimvyECE/energy-evidence#quick-start-python-310) and open the HTML report, or [inspect the example output](https://github.com/aimvyECE/energy-evidence/blob/main/examples/report/report.html). The workshop totals 3,700 kWh, and the March change is flagged for investigation, not diagnosed as a fault. The [deterministic emissions envelope](https://github.com/aimvyECE/energy-evidence#assumption-stress-test-optional-schema-v3) shows 36–88 kgCO₂e for 1,000 invented kWh and explicit meter/factor bounds; this is not a confidence interval.
 
 ### Draft changes, not part of `main`
 
@@ -48,6 +48,7 @@ not field validity or production readiness.
 | [Microgrid Dispatch Lab #1](https://github.com/aimvyECE/microgrid-dispatch-lab/pull/1) | Sparse dispatch constraints reduce matrix storage for long horizons without changing the model. |
 | [Energy Evidence #1](https://github.com/aimvyECE/energy-evidence/pull/1) | Compares matched calendar months across years; not a weather-normalized savings estimate. |
 | [Energy Evidence #2](https://github.com/aimvyECE/energy-evidence/pull/2) | Flags entire missing sites when an expected site list is supplied, without treating missing readings as zero. |
+| [Context Budget Lab #1](https://github.com/aimvyECE/context-budget-lab/pull/1) | Reuses ranking features rather than recomputing them each round; draft regression checks preserve existing output. |
 
 My public account also contains unmodified forks of upstream Crafting Apps.
 Those applications are the work of their original authors, not portfolio projects
